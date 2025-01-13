@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تهنئة رمضان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun&family=Amiri&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.postimg.cc/nhKw8747/Picsart-25-01-12-10-10-14-098.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Amiri', serif;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            margin-top: 5%;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            font-family: 'Reem Kufi Fun', sans-serif;
+            font-size: 2.5rem;
+            color: #ffd700;
+        }
+        label, input, select, button {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            background: #000;
+            color: #fff;
+        }
+        button {
+            background-color: #d4af37;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>رمضان كريم</h1>
+        <form action="page2.html" method="GET">
+            <label for="name">اسمك:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="category">اختر الفئة:</label>
+            <select id="category" name="category" required>
+                <option value="family">العائلة</option>
+                <option value="parents">أمي وأبي</option>
+                <option value="siblings">الإخوة</option>
+                <option value="friends">الأصحاب</option>
+                <option value="children">الأولاد</option>
+            </select>
+            
+            <label for="recipients">أسماء الأشخاص:</label>
+            <input type="text" id="recipients" name="recipients" placeholder="اكتب أسماء مفصولة بفواصل" required>
+            
+            <button type="submit">إرسال التهنئة</button>
+        </form>
+    </div>
+</body>
+</html>

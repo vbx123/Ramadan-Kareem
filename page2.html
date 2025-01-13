@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تهنئة رمضان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun&family=Amiri&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* خلفية سوداء */
+            color: #fff;
+            font-family: 'Amiri', serif;
+        }
+        h1 {
+            font-family: 'Reem Kufi Fun', sans-serif;
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px 0;
+            color: #d4af37;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .container {
+            text-align: center;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .typewriter {
+            font-size: 1.5rem;
+            line-height: 2;
+            color: #f1c40f;
+            overflow: hidden;
+            border-right: 2px solid #f1c40f;
+            animation: typing 15s steps(50, end), blink 0.5s step-end infinite;
+            direction: rtl; /* لضمان ظهور النص من اليمين */
+            white-space: normal; /* السماح بانكسار النص */
+            word-wrap: break-word; /* توزيع النص الطويل على عدة أسطر */
+        }
+        .footer {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 30px;
+            color: #6ad1c3;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+    </style>
+</head>
+<body>
+    <!-- النص العلوي -->
+    <h1 id="user-name">محمد يهنئكم بحلول شهر رمضان الكريم</h1>
+
+    <!-- النص الرئيسي مع تأثير الكتابة -->
+    <div class="container">
+        <p id="main-message" class="typewriter"></p>
+    </div>
+
+    <!-- النص السفلي -->
+    <div class="footer" id="recipients">محمد1، محمد2، محمد3 رمضان كريم أعاده الله علينا وعليكم بالخير واليمن والبركات</div>
+
+    <!-- الموسيقى -->
+    <audio autoplay loop>
+        <source src="https://www.matb3aa.com/music/aghany-mnasbat/Aghani-Shahr-Ramadan/Ramadan.Gana-Abd.Elmotlb-MaTb3aa.Com.mp3" type="audio/mpeg">
+        متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+
+    <script>
+        // جلب البيانات من رابط URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('name') || "محمد";
+        const category = urlParams.get('category') || "family";
+        const recipients = urlParams.get('recipients') || "محمد1، محمد2، محمد3";
+
+        // النصوص حسب الفئات
+        const categories = {
+            family: "عائلتي الحبيبة، مع قدوم رمضان، يا رب يكون شهر مليان خير وبركة عليكم. أسأل الله إنه يحفظكم ويسعد قلوبكم دايمًا.",
+            parents: "أمي وأبويا الغاليين، رمضان كريم عليكم. يا رب يجعل أيامكم كلها سعادة، ويتقبل دعاءكم وصيامكم.",
+            siblings: "إخواتي الغاليين، رمضان كريم عليكم، يا رب يكون شهر خير وبركة عليكم.",
+            friends: "كل سنة وانتو طيبين يا أعز الناس، رمضانكم مبارك وأيامكم كلها سعادة وفرحة.",
+            children: "رمضان قرب، يا رب يكون شهر مليان بالفرحة والطاعة ليكم يا أغلى ما عندي."
+        };
+
+        // تعيين النصوص في الصفحة
+        document.getElementById('user-name').innerText = `${userName} يهنئكم بحلول شهر رمضان الكريم`;
+        document.getElementById('main-message').innerText = categories[category];
+        document.getElementById('recipients').innerText = `${recipients} رمضان كريم أعاده الله علينا وعليكم بالخير واليمن والبركات`;
+    </script>
+</body>
+</html>
